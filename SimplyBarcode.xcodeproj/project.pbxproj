@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0809B725AB7C313D5A829722 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E822A24F1CFB0732A27F809D /* libPods.a */; };
+		56606CBC1A7474DE007E3211 /* DiscoveredBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56606CBB1A7474DE007E3211 /* DiscoveredBarcodeView.swift */; };
 		56F7A4D21A7465E800B9BC7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7A4D11A7465E800B9BC7B /* AppDelegate.swift */; };
 		56F7A4D51A7465E800B9BC7B /* SimplyBarcode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56F7A4D31A7465E800B9BC7B /* SimplyBarcode.xcdatamodeld */; };
 		56F7A4D71A7465E800B9BC7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7A4D61A7465E800B9BC7B /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56606CBB1A7474DE007E3211 /* DiscoveredBarcodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredBarcodeView.swift; sourceTree = "<group>"; };
 		56F7A4CC1A7465E800B9BC7B /* SimplyBarcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyBarcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F7A4D01A7465E800B9BC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F7A4D11A7465E800B9BC7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,10 @@
 		56F7A4E41A7465E800B9BC7B /* SimplyBarcodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplyBarcodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F7A4E91A7465E800B9BC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F7A4EA1A7465E800B9BC7B /* SimplyBarcodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyBarcodeTests.swift; sourceTree = "<group>"; };
+		56F7A4F41A7466D500B9BC7B /* SimplyBarcode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplyBarcode-Bridging-Header.h"; sourceTree = "<group>"; };
+		88B35B7349CE3E15FED1187D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A75A0817D52B4AEB90F306DA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E822A24F1CFB0732A27F809D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0809B725AB7C313D5A829722 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,9 @@
 				56F7A4CE1A7465E800B9BC7B /* SimplyBarcode */,
 				56F7A4E71A7465E800B9BC7B /* SimplyBarcodeTests */,
 				56F7A4CD1A7465E800B9BC7B /* Products */,
+				5B422B0523BEDB4137661586 /* Pods */,
+				8BFB0C613AEA57E289CD2F69 /* Frameworks */,
+				56F7A4F41A7466D500B9BC7B /* SimplyBarcode-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +97,7 @@
 				56F7A4DD1A7465E800B9BC7B /* LaunchScreen.xib */,
 				56F7A4D31A7465E800B9BC7B /* SimplyBarcode.xcdatamodeld */,
 				56F7A4CF1A7465E800B9BC7B /* Supporting Files */,
+				56606CBB1A7474DE007E3211 /* DiscoveredBarcodeView.swift */,
 			);
 			path = SimplyBarcode;
 			sourceTree = "<group>";
@@ -115,6 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5B422B0523BEDB4137661586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88B35B7349CE3E15FED1187D /* Pods.debug.xcconfig */,
+				A75A0817D52B4AEB90F306DA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BFB0C613AEA57E289CD2F69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E822A24F1CFB0732A27F809D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56F7A4EE1A7465E800B9BC7B /* Build configuration list for PBXNativeTarget "SimplyBarcode" */;
 			buildPhases = (
+				3B5ABD5F840153B3D8F43767 /* Check Pods Manifest.lock */,
 				56F7A4C81A7465E800B9BC7B /* Sources */,
 				56F7A4C91A7465E800B9BC7B /* Frameworks */,
 				56F7A4CA1A7465E800B9BC7B /* Resources */,
+				306355A5F651B763F33D73FD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,12 +241,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		306355A5F651B763F33D73FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B5ABD5F840153B3D8F43767 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56F7A4C81A7465E800B9BC7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				56F7A4D71A7465E800B9BC7B /* ViewController.swift in Sources */,
+				56606CBC1A7474DE007E3211 /* DiscoveredBarcodeView.swift in Sources */,
 				56F7A4D51A7465E800B9BC7B /* SimplyBarcode.xcdatamodeld in Sources */,
 				56F7A4D21A7465E800B9BC7B /* AppDelegate.swift in Sources */,
 			);
@@ -338,21 +403,30 @@
 		};
 		56F7A4EF1A7465E800B9BC7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B35B7349CE3E15FED1187D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimplyBarcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimplyBarcode-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		56F7A4F01A7465E800B9BC7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75A0817D52B4AEB90F306DA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SimplyBarcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimplyBarcode-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +483,7 @@
 				56F7A4F01A7465E800B9BC7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56F7A4F11A7465E800B9BC7B /* Build configuration list for PBXNativeTarget "SimplyBarcodeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +492,7 @@
 				56F7A4F31A7465E800B9BC7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
