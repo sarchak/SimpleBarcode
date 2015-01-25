@@ -16,6 +16,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var  identifiedBorder : DiscoveredBarCodeView?
     var timer : NSTimer?
     
+    @IBOutlet weak var myview: UIView!
     /* Add the preview layer here */
     func addPreviewLayer() {
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
@@ -49,11 +50,23 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         session.addOutput(output)
         output.metadataObjectTypes = output.availableMetadataObjectTypes
         output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        
+        // Add a label to display the resultant message
+        let label = UILabel(frame: CGRectMake(0, CGRectGetHeight(self.view.bounds) - 75, CGRectGetWidth(self.view.bounds), 75))
+        label.numberOfLines = 0;
+        label.backgroundColor = UIColor.greenColor()
+        label.textColor = UIColor.grayColor()
+        label.textAlignment = NSTextAlignment.Center
+
+        self.view.addSubview(myview)
         session.startRunning()
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        session.stopRunning()
+    }
     override func viewWillAppear(animated: Bool) {
-        
+        session.startRunning()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,7 +110,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 let identifiedCorners = self.translatePoints(unwraped.corners, fromView: self.view, toView: self.identifiedBorder!)
                 identifiedBorder?.drawBorder(identifiedCorners)
                 self.identifiedBorder?.hidden = false
-                
+
             }
         }
         self.startTimer()

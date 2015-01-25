@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="egf-zr-Rg2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="0PR-jC-Rbf">
+            <objects>
+                <viewController id="fDO-54-ZpU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="piR-Ye-Fce"/>
+                        <viewControllerLayoutGuide type="bottom" id="C6E-p4-gvx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sks-it-8c0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="VmG-9Z-1gZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79Y-he-kd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="937"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DiV-tL-tnx">
+            <objects>
+                <tabBarController id="egf-zr-Rg2" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="yQO-tm-qey">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="9wU-C4-Dor"/>
+                        <segue destination="fDO-54-ZpU" kind="relationship" relationship="viewControllers" id="ALa-tT-xA8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77i-PD-hZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="602"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -14,13 +54,51 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2A-9e-LdY">
+                                <rect key="frame" x="0.0" y="480" width="600" height="71"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-4h-y6D">
+                                        <rect key="frame" x="58" y="21" width="60" height="30"/>
+                                        <state key="normal" title="Details">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhD-z4-q7f">
+                                        <rect key="frame" x="470" y="21" width="114" height="30"/>
+                                        <state key="normal" title="Add to Inventory">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.6588235294" green="0.84313725490000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FhD-z4-q7f" secondAttribute="trailing" constant="16" id="0CK-90-te0"/>
+                                    <constraint firstAttribute="centerY" secondItem="FhD-z4-q7f" secondAttribute="centerY" id="Hrj-tF-Xcm"/>
+                                    <constraint firstItem="ca2-4h-y6D" firstAttribute="leading" secondItem="L2A-9e-LdY" secondAttribute="leading" constant="58" id="Zi1-B6-ZCx"/>
+                                    <constraint firstAttribute="height" constant="71" id="r4V-Dx-dA3"/>
+                                    <constraint firstAttribute="centerY" secondItem="ca2-4h-y6D" secondAttribute="centerY" id="zKe-z4-RA1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L2A-9e-LdY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="JmH-ac-iPp"/>
+                            <constraint firstAttribute="trailing" secondItem="L2A-9e-LdY" secondAttribute="trailing" id="ioY-g5-dcO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="L2A-9e-LdY" secondAttribute="bottom" id="wYx-el-PqS"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="CZw-JG-szZ"/>
+                    <connections>
+                        <outlet property="myview" destination="L2A-9e-LdY" id="HsP-ai-7B0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-127" y="237"/>
         </scene>
     </scenes>
 </document>
