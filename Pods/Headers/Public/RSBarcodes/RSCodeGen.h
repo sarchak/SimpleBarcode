@@ -1,0 +1,1 @@
+../../../RSBarcodes/RSBarcodes/RSCodeGen.h

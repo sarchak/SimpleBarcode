@@ -1,0 +1,10 @@
+PODS:
+  - RSBarcodes (0.1)
+
+DEPENDENCIES:
+  - RSBarcodes (~> 0.1)
+
+SPEC CHECKSUMS:
+  RSBarcodes: c4d54f52033f9af3d781230292568529ade14b78
+
+COCOAPODS: 0.34.4

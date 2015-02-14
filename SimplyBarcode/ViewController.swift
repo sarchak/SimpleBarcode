@@ -16,7 +16,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var  identifiedBorder : DiscoveredBarCodeView?
     var timer : NSTimer?
     
-    @IBOutlet weak var myview: UIView!
+    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var productName: UILabel!
+    
     /* Add the preview layer here */
     func addPreviewLayer() {
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
@@ -51,14 +53,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         output.metadataObjectTypes = output.availableMetadataObjectTypes
         output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
         
-        // Add a label to display the resultant message
-        let label = UILabel(frame: CGRectMake(0, CGRectGetHeight(self.view.bounds) - 75, CGRectGetWidth(self.view.bounds), 75))
-        label.numberOfLines = 0;
-        label.backgroundColor = UIColor.greenColor()
-        label.textColor = UIColor.grayColor()
-        label.textAlignment = NSTextAlignment.Center
 
-        self.view.addSubview(myview)
+        self.view.addSubview(myView)
         session.startRunning()
     }
 
@@ -98,6 +94,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     func removeBorder() {
         /* Remove the identified border */
         self.identifiedBorder?.hidden = true
+        self.productName.hidden = true
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
@@ -110,7 +107,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 let identifiedCorners = self.translatePoints(unwraped.corners, fromView: self.view, toView: self.identifiedBorder!)
                 identifiedBorder?.drawBorder(identifiedCorners)
                 self.identifiedBorder?.hidden = false
-
+                self.productName.hidden = false;
+                self.productName.text = unwraped.stringValue
             }
         }
         self.startTimer()
